@@ -63,7 +63,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/forms', [ResourceController::class, 'forms'])->name('resources.forms');
     Route::get('/forms/{form}/download', [ResourceController::class, 'downloadForm'])->name('resources.forms.download');
     Route::get('/timeline', [ResourceController::class, 'timeline'])->name('resources.timeline');
-    Route::get('/snru-api', [ResourceController::class, 'snruApiExplorer'])->name('resources.snru-api');
 
     // Daily Logbook & Supervision (บันทึกประจำวันและติดตามการนิเทศก์งาน)
     Route::get('/logbook', [DailyLogController::class, 'index'])->name('logbook.index');

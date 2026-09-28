@@ -85,18 +85,7 @@
 
 ---
 
-### 6. การเชื่อมต่อ SNRU Student REST API
-
-ระบบได้ผนวกรวมมาตรฐาน **SNRU Student API** สำหรับการดึงและค้นหาข้อมูลนักศึกษา:
-* **Laravel Native Endpoints:**
-  - `GET /api/snru/students`: ค้นหาและกรองข้อมูลนักศึกษา (`?q=`, `?major=`, `?student_id=`, `?page=`, `?limit=`)
-  - `GET /api/snru/student/{id}`: ดึงข้อมูลโปรไฟล์นักศึกษารายบุคคลด้วยรหัสนักศึกษา
-  - `GET /api/snru/faculties` และ `GET /api/snru/majors`: รายชื่อคณะและสาขาวิชา
-* **Standalone Project:** เก็บซอร์สโค้ดและฐานข้อมูลต้นแบบไว้ในโฟลเดอร์ `snru_student_api/`
-
----
-
-### 7. บัญชีสำหรับทดสอบระบบ (Demo Accounts)
+### 6. บัญชีสำหรับทดสอบระบบ (Demo Accounts)
 
 ระบบมีแถบ **Quick Role Switcher** ด้านบนสุดของหน้าเว็บ และปุ่มคลิกเดียวในหน้า Login เพื่อความสะดวกในการตรวจและนำเสนอ:
 
@@ -107,7 +96,7 @@
 
 ---
 
-### 8. คำสั่งสำหรับรันระบบ (How to Run)
+### 7. คำสั่งสำหรับรันระบบ (How to Run)
 
 ```bash
 # 1. ติดตั้ง Dependencies

@@ -11,7 +11,6 @@ use App\Models\DailyLog;
 use App\Models\DownloadableForm;
 use App\Models\Guideline;
 use App\Models\Role;
-use App\Models\SnruStudent;
 use App\Models\Timeline;
 use App\Models\User;
 use Carbon\Carbon;
@@ -509,61 +508,5 @@ class DatabaseSeeder extends Seeder
             'instructor_comment' => null,
             'verified_at' => null,
         ]);
-
-        // 9. ข้อมูลนักศึกษาจริงจากเว็บไซต์มหาวิทยาลัยราชภัฏสกลนคร (snru.ac.th)
-        $snruData = [
-            // ชั้นปีที่ 1 (รหัส 68)
-            ['student_id' => '68102105101', 'full_name' => 'นายลัทธพล เเสนโสม', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105102', 'full_name' => 'นายเดชาธร รัตนะ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105103', 'full_name' => 'นายชัชพล ใจบุญ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105104', 'full_name' => 'นายธฤตวัน โล้วทรัพย์ธนา', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105105', 'full_name' => 'นายพันธวิศ บุตรมหา', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105107', 'full_name' => 'นางสาวชวิศา ไชยหาวงค์', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105113', 'full_name' => 'นางสาวกนกวรรณ ดีสร้อย', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105121', 'full_name' => 'นางสาวปณสรณ์ อ่อนสุระทุม', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105126', 'full_name' => 'นางสาวมนัญชยา ชาสงวน', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-            ['student_id' => '68102105127', 'full_name' => 'นางสาวรุ่งอรุณ ศรีการัง', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 1, 'status' => 'active'],
-
-            // ชั้นปีที่ 3 (รหัส 67 และ 66 - กลุ่มเตรียมฝึกประสบการณ์วิชาชีพ)
-            ['student_id' => '67102122131', 'full_name' => 'นางสาวปาจรีย์ สุคนธชาติ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'เทคโนโลยีคอมพิวเตอร์และดิจิทัล', 'year_level' => 3, 'status' => 'active'],
-            ['student_id' => '67102122145', 'full_name' => 'นายณัฐวุฒิ พัฒนาการ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 3, 'status' => 'active'],
-            ['student_id' => '67102122101', 'full_name' => 'นายกิตติศักดิ์ พรหมวงษา', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'เทคโนโลยีคอมพิวเตอร์และดิจิทัล', 'year_level' => 3, 'status' => 'active'],
-            ['student_id' => '67102122102', 'full_name' => 'นายปฏิภาณ ศรีสว่าง', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'เทคโนโลยีคอมพิวเตอร์และดิจิทัล', 'year_level' => 3, 'status' => 'active'],
-            ['student_id' => '67102122103', 'full_name' => 'นางสาววรรณภา คำมูล', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'เทคโนโลยีคอมพิวเตอร์และดิจิทัล', 'year_level' => 3, 'status' => 'active'],
-            ['student_id' => '66102105101', 'full_name' => 'นายพิสิฐ ลีนาลาด', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 3, 'status' => 'active'],
-
-            // ชั้นปีที่ 4 (รหัส 65)
-            ['student_id' => '65102105101', 'full_name' => 'นายจตุพล ปาระพิมพ์', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105107', 'full_name' => 'นายวีระชาติ ฝอยทอง', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105108', 'full_name' => 'นายธีรภัทร แก่นคำ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105109', 'full_name' => 'นายธัญพงศ์ กุลชาติ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105110', 'full_name' => 'นายชินวัฒน์ กิตติกุลโรจน์', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105111', 'full_name' => 'นายอภิวัฒน์ ใครบุตร', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105112', 'full_name' => 'นางสาวกนกพร ทอนฮามแก้ว', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105113', 'full_name' => 'นางสาวจิราพัชร ข่วงทิพย์', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105114', 'full_name' => 'นางสาวศิรินธร ใบลาน', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105119', 'full_name' => 'นางสาวภาขวัญ เพ็ญจะมุกด์', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105120', 'full_name' => 'นางสาวสุพรรณษา กิ้วลาดแยง', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105126', 'full_name' => 'นางสาวพิรดา บุญเรือง', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-            ['student_id' => '65102105127', 'full_name' => 'นางสาวปิยะฉัตร คำภูแสน', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'active'],
-
-            // ผู้สำเร็จการศึกษาแล้ว (graduated)
-            ['student_id' => '64102105104', 'full_name' => 'นางสาวธารทิพย์ พรมมุงคุณ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'graduated'],
-            ['student_id' => '64102105105', 'full_name' => 'นายธนพล ยางธิสาร', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'graduated'],
-            ['student_id' => '63102105101', 'full_name' => 'นายคุณากร โพธิ์สุ', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'graduated'],
-            ['student_id' => '63102105102', 'full_name' => 'นายกิตติชัย มีมา', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'graduated'],
-            ['student_id' => '63102105103', 'full_name' => 'นายอนุพงค์ คำจรสิงห์', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'graduated'],
-            ['student_id' => '63102105104', 'full_name' => 'นายธนวัฒน์ จ้อยจีด', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'graduated'],
-            ['student_id' => '63102105105', 'full_name' => 'นายวัฒนา กุลดิลก', 'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี', 'major' => 'วิทยาการคอมพิวเตอร์', 'year_level' => 4, 'status' => 'graduated'],
-        ];
-
-        foreach ($snruData as $stu) {
-            $stu['email'] = ($stu['email'] ?? $stu['student_id'] . '@snru.ac.th');
-            $stu['phone'] = ($stu['phone'] ?? '042-772391');
-            SnruStudent::updateOrCreate(
-                ['student_id' => $stu['student_id']],
-                $stu
-            );
-        }
     }
 }
