@@ -11,6 +11,7 @@ use App\Models\DailyLog;
 use App\Models\DownloadableForm;
 use App\Models\Guideline;
 use App\Models\Role;
+use App\Models\SnruStudent;
 use App\Models\Timeline;
 use App\Models\User;
 use Carbon\Carbon;
@@ -508,5 +509,86 @@ class DatabaseSeeder extends Seeder
             'instructor_comment' => null,
             'verified_at' => null,
         ]);
+
+        // 9. SNRU Student Database Records (จาก snru_student_api/database.sql)
+        $snruData = [
+            [
+                'student_id' => '671000001',
+                'full_name' => 'นายตัวอย่าง หนึ่ง',
+                'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี',
+                'major' => 'เทคโนโลยีคอมพิวเตอร์และดิจิทัล',
+                'year_level' => 2,
+                'status' => 'active',
+                'email' => 'sample1@snru.ac.th',
+                'phone' => '081-111-0001',
+            ],
+            [
+                'student_id' => '671000002',
+                'full_name' => 'นางสาวตัวอย่าง สอง',
+                'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี',
+                'major' => 'เทคโนโลยีคอมพิวเตอร์และดิจิทัล',
+                'year_level' => 2,
+                'status' => 'active',
+                'email' => 'sample2@snru.ac.th',
+                'phone' => '081-111-0002',
+            ],
+            [
+                'student_id' => '681000001',
+                'full_name' => 'นายตัวอย่าง สาม',
+                'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี',
+                'major' => 'วิทยาการข้อมูล',
+                'year_level' => 1,
+                'status' => 'active',
+                'email' => 'sample3@snru.ac.th',
+                'phone' => '081-111-0003',
+            ],
+            [
+                'student_id' => '661000001',
+                'full_name' => 'นางสาวตัวอย่าง สี่',
+                'faculty' => 'คณะมนุษยศาสตร์และสังคมศาสตร์',
+                'major' => 'ภาษาอังกฤษ',
+                'year_level' => 4,
+                'status' => 'active',
+                'email' => 'sample4@snru.ac.th',
+                'phone' => '081-111-0004',
+            ],
+            [
+                'student_id' => '651000001',
+                'full_name' => 'นายตัวอย่าง ห้า',
+                'faculty' => 'คณะวิทยาการจัดการ',
+                'major' => 'บริหารธุรกิจ',
+                'year_level' => 4,
+                'status' => 'graduated',
+                'email' => 'sample5@snru.ac.th',
+                'phone' => '081-111-0005',
+            ],
+            [
+                'student_id' => '67102122131',
+                'full_name' => 'นางสาว ปาจรีย์ สุคนธชาติ',
+                'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี',
+                'major' => 'เทคโนโลยีคอมพิวเตอร์และดิจิทัล',
+                'year_level' => 3,
+                'status' => 'active',
+                'email' => 'student@snru.ac.th',
+                'phone' => '095-123-4567',
+            ],
+            [
+                'student_id' => '67102122145',
+                'full_name' => 'นาย ณัฐวุฒิ พัฒนาการ',
+                'faculty' => 'คณะวิทยาศาสตร์และเทคโนโลยี',
+                'major' => 'วิทยาการคอมพิวเตอร์',
+                'year_level' => 3,
+                'status' => 'active',
+                'email' => 'student2@snru.ac.th',
+                'phone' => '092-987-6543',
+            ],
+        ];
+
+        foreach ($snruData as $stu) {
+            SnruStudent::updateOrCreate(
+                ['student_id' => $stu['student_id']],
+                $stu
+            );
+        }
     }
 }

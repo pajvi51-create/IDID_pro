@@ -18,7 +18,8 @@ import {
     AlertCircle,
     GraduationCap,
     ArrowRightLeft,
-    ClipboardCheck
+    ClipboardCheck,
+    Network
 } from 'lucide-react';
 
 export default function AppLayout({ children, title }) {
@@ -59,6 +60,7 @@ export default function AppLayout({ children, title }) {
         { name: 'เอกสารและแบบฟอร์ม', href: '/forms', icon: Download, show: true },
         { name: 'คำแนะนำ Resume/พอร์ต', href: '/guidelines', icon: BookOpen, show: true },
         { name: 'ปฏิทินกำหนดการ', href: '/timeline', icon: Calendar, show: true },
+        { name: 'SNRU Student API', href: '/snru-api', icon: Network, show: true },
     ];
 
     const getRoleBadge = () => {

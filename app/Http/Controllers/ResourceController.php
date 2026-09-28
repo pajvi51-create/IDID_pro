@@ -55,4 +55,11 @@ class ResourceController extends Controller
             'timelines' => $timelines,
         ]);
     }
+
+    public function snruApiExplorer(): Response
+    {
+        return Inertia::render('Resources/SnruApi', [
+            'sampleStudents' => \App\Models\SnruStudent::all(),
+        ]);
+    }
 }
