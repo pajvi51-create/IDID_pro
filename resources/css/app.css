@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'LINE Seed Sans TH';
+    src: url('/fonts/line-seed-sans-th/LINESeedSansTH_Th.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINE Seed Sans TH';
+    src: url('/fonts/line-seed-sans-th/LINESeedSansTH_Rg.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINE Seed Sans TH';
+    src: url('/fonts/line-seed-sans-th/LINESeedSansTH_Rg.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINE Seed Sans TH';
+    src: url('/fonts/line-seed-sans-th/LINESeedSansTH_Bd.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINE Seed Sans TH';
+    src: url('/fonts/line-seed-sans-th/LINESeedSansTH_Bd.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINE Seed Sans TH';
+    src: url('/fonts/line-seed-sans-th/LINESeedSansTH_XBd.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: 'LINE Seed Sans TH', sans-serif;
+    }
+    body {
+        @apply bg-slate-50 text-slate-800 antialiased;
+        font-family: 'LINE Seed Sans TH', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold tracking-tight;
+        font-family: 'LINE Seed Sans TH', sans-serif;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
